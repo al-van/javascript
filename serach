@@ -1,0 +1,30 @@
+window.onload = init;// allow the window to lord up before the comment 
+/* ===============================add button======================================= */
+
+
+function init() { 
+    var button = document.getElementById("addbutton");//add button
+    button.onclick = handleButtonClick; 
+}
+/* ===============================add button======================================= */
+
+/* ============================= functions===================================== */
+
+function handleButtonClick() {
+    
+    var textInput = document.getElementById("nameTextInput"); //declaring variables 
+    var Name = textInput.value; //declaring variables
+    var comment = document.getElementById("commentTextInput");//declaring variables
+    var Comment = comment.value //declaring varible 
+    alert("Add" + Name);//adding name
+    
+    
+    var paragraph = document.createElement("p");//  declaring variables
+    paragraph.innerHTML = (Name + ": " + Comment ); //printing the name and the comment in the sane line 
+    var ul = document.getElementById("contact");//which will be place under the ul
+    ul.appendChild(paragraph);
+    
+}
+
+/* ============================= functions===================================== */
+
